@@ -1,0 +1,51 @@
+<div class='text-bar'>
+<div class='text-box'>
+<div class='text'>
+スクールチャットは学校ごとに登録したIDもと、
+先生と生徒、生徒と生徒どうしの安心なコミュニケーションをサポートします。<br>
+<br>
+<br>
+■登録手順■<br>
+<br>
+・学校IDを登録<br>
+・先生のユーザー登録<br>
+・先生がクラスを作り、生徒ID作成
+</div>
+</div>
+</div>
+<div class = "icon">
+  <div id = "lottie">
+    <ul class="gnav">
+      <li>
+        <div class='logo'>
+          <%= image_tag 'logo-items/teacher-logo.png' , size: '200x73' %>
+        </div>
+        <script src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src = "https://assets5.lottiefiles.com/packages/lf20_9wwkxefq.json"
+          background = "transparent"  speed = "1"  style = "width: 200px; height: 200px;" hover loop >
+        </lottie-player>
+          <ul>
+            <li><%= link_to "学校新規登録", "#" %></li>
+            <li><%= link_to "先生新規登録", "#" %></li>
+            <li><%= link_to "ログイン", "#" %></li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+  <div id = "lottie">
+    <ul class="gnav">
+      <li>
+        <div class='logo'>
+          <%= image_tag 'logo-items/students-logo.png' , size: '200x73' %>
+        </div>
+        <script src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src = "https://assets5.lottiefiles.com/packages/lf20_9wwkxefq.json"
+          background = "transparent"  speed = "1"  style = "width: 200px; height: 200px;" hover loop >
+        </lottie-player>
+          <ul>
+            <li><%= link_to "ログイン", "#" %></li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+</div>

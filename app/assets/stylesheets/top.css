@@ -1,0 +1,45 @@
+body{
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.wrapper {
+}
+.head_bar {
+  background-color: #ffd000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px;
+  height: 130px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_chat {
+  height: 1200px;
+}
+.icon {
+  display: flex;
+  margin: 50px 0px;
+  justify-content: center;
+}
+.text-bar{
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.text-box{
+  width: 480px;
+  background-color: #ebebeb;
+  padding: 20px;
+}
+.text {
+font-size: 20px;
+color: #00005F;
+line-height: 30px;
+text-decoration: none;
+}
