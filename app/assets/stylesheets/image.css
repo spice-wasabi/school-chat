@@ -1,0 +1,12 @@
+.image-size-logo {
+  width: auto;
+  height: 90px
+}
+.image-size200 {
+  width: 200px;
+  height: auto;
+}
+.image-size300 {
+  width: 300px;
+  height: auto;
+}

@@ -2,10 +2,8 @@ body{
   font-family: 'Kosugi Maru', sans-serif;
 }
 
-.wrapper {
-}
 .head_bar {
-  background-color: #ffd000;
+  background-color: #ffd725;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,12 +32,7 @@ body{
 }
 .text-box{
   width: 480px;
+  border-radius: 10px;
   background-color: #ebebeb;
   padding: 20px;
-}
-.text {
-font-size: 20px;
-color: #00005F;
-line-height: 30px;
-text-decoration: none;
 }
