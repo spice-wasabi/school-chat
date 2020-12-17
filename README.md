@@ -9,6 +9,7 @@ School Chat
 　対象が小学生なので、目を引くようなWebアプリケーションとしてアニメーションの再生機能・Lottieも取り入れてみようと考えた。
 
 # ＤＥＭＯ
+以下、実装予定内容を含む。
 ### 新規登録ページ
 ![新規登録画面](https://user-images.githubusercontent.com/73770392/102333189-6b3f7380-3fd0-11eb-85e5-cee16d9fc204.png)
 
