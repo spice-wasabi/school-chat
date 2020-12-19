@@ -59,3 +59,5 @@ gem 'pry-rails'
 gem 'image_processing', '~> 1.2'
 # 追加  画像サイズを調整
 gem 'mini_magick'
+# 追加  日本語化
+gem 'rails-i18n'
