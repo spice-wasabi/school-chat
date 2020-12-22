@@ -1,22 +1,25 @@
-<div>
-<p class="form-title">学校新規登録</p>
+<div class="room-main-header">
 </div>
-<div class="text-center">
-先生を新規登録する場合、こちらの学校IDが必要となります。
+<div class="room-main-margin">
 </div>
-
-<%= form_with model: @school, url: schools_path, method: :post, local: true do |f| %>
+<div class="room-main-chat">
+  <p class="form-title">学校新規登録</p>
+  <div class="text-center">
+    先生を新規登録する場合、こちらの学校IDが必要となります。
+  </div>
+  <%= form_with model: @school, url: schools_path, method: :post, local: true do |f| %>
   <div class="form-item">
-    <div class='form-box'>
-    <%= render 'shared/error_messages',  model: f.object %>
-      <div class='form-line'>
+    <div class="form-box">
+      <%= render "shared/error_messages",  model: f.object %>
+      <div class="form-line">
         <label class="label">学校ID</label>
         <%= f.text_field :school_name, class:"inputs", id:"school", placeholder:"学校ID(英数10文字まで)" %>
       </div>
       <div class="form-line">
-        <%= f.submit '作成', class:"create-box" %>
-        <%= link_to '戻る', root_path, class:"back-box" %>
+        <%= f.submit "作成", class:"create-box" %>
+        <%= link_to "戻る", root_path, class:"back-box" %>
       </div>
     </div>
   </div>
-<% end %>
+  <% end %>
+</div>

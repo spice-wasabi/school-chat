@@ -1,0 +1,51 @@
+<div class="room-main-header">
+</div>
+<div class="room-main-margin">
+</div>
+
+<div class="room-main-chat">
+  <p class="form-title">先生新規登録</p>
+  <div class="text-center">
+    先生を新規登録する場合、学校IDが必須となります。
+  </div>
+
+  <%= form_with model: @user, url: user_registration_path, id: "new_user", local: true do |f| %>
+    <div class="form-item">
+      <div class="form-box">
+        <%= render "shared/error_messages",  model: f.object %>
+
+          <div class="form-line">
+            <label class="label">ユーザーID</label>
+            <%= f.email_field :name, class:"inputs", id:"name", placeholder:"10文字まで" %>
+          </div>
+
+          <div class="form-line">
+            <label class="label">表示名</label>
+            <%= f.email_field :nickname, class:"inputs", id:"nickname", placeholder:"10文字まで" %>
+          </div>
+
+          <div class="form-line">
+            <label class="label">Email</label>
+            <%= f.email_field :email, class:"inputs", id:"email", placeholder:"Email" %>
+          </div>
+
+          <div class="form-line">
+            <label class="label">パスワード</label>
+            <%= f.password_field :password, autocomplete: "off", class:"inputs", id:"password", placeholder:"英数10文字まで" %>
+          </div>
+
+          <div class="form-line">
+            <label class="label">パスワード<br>確認</label>
+            <%= f.password_field :password_confirmation, autocomplete: "off", class:"inputs", id:"password_confirmation", placeholder:"英数10文字まで" %>
+          </div>
+
+          <div class="form-line">
+            <%= f.submit "作成", class:"create-box" %>
+            <%= link_to "戻る", root_path, class:"back-box" %>
+          </div>
+
+      </div>
+    </div>
+  <% end %>
+</div>
+

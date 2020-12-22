@@ -1,20 +1,8 @@
-<div class='wrapper'>
-  <div class='side-bar'>
-    <div class='side-bar-header'>
-      <div>
-        <%= image_tag 'logo-items/ShoolChat-logo.png' , class: 'image-size300' %>
-      </div>
-    </div>
-    <div class='side-bar-main'>
-      <%= render 'menu_new' %>
-
-    </div>
+<div class="wrapper">
+  <div calss="side-bar">
+  <%= render "shared/menu_new" %>
   </div>
-  <div clss='room-mein'>
-      <div class='room-main-header'>
-      </div>
-      <div class='room-main-chat'>
-      <%= render 'school_new' %>
-      </div>
+  <div class="room-main">
+    <%= render "school_new" %>
   </div>
 </div>

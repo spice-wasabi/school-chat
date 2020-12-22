@@ -1,6 +1,6 @@
-<div class='text-bar'>
-  <div class='text-box'>
-    <div class='text'>
+<div class="text-bar">
+  <div class="text-box">
+    <div class="text">
       スクールチャットは学校ごとに登録したIDもと、
       先生と生徒、生徒と生徒どうしの安心なコミュニケーションをサポートします。<br>
       <br>
@@ -17,16 +17,15 @@
   <div id = "lottie">
     <ul class="gnav">
       <li>
-        <div class='logo'>
-          <%= image_tag 'logo-items/teacher-logo.png' , class: 'image-size200' %>
+        <div class="logo">
+          <%= image_tag "logo-items/teacher-logo.png" , class: "image-size200" %>
         </div>
-        <script src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player src = "https://assets5.lottiefiles.com/packages/lf20_9wwkxefq.json"
           background = "transparent"  speed = "1"  style = "width: 200px; height: 200px;" hover loop >
         </lottie-player>
           <ul>
             <li><%= link_to "学校新規登録", new_school_path %></li>
-            <li><%= link_to "先生新規登録", "#" %></li>
+            <li><%= link_to "先生新規登録", new_user_registration_path %></li>
             <li><%= link_to "ログイン", "#" %></li>
           </ul>
       </li>
@@ -36,12 +35,11 @@
     <ul class="gnav">
       <li>
         <div>
-          <%= image_tag 'logo-items/students-logo.png' , class: 'image-size200' %>
+          <%= image_tag "logo-items/students-logo.png" , class: "image-size200" %>
         </div>
-        <script src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src = "https://assets5.lottiefiles.com/packages/lf20_9wwkxefq.json"
+        <lottie-player src = "https://assets4.lottiefiles.com/packages/lf20_bslbgeva.json"
           background = "transparent"  speed = "1"  style = "width: 200px; height: 200px;" hover loop >
-        </lottie-player>
+          </lottie-player>
           <ul>
             <li><%= link_to "ログイン", "#" %></li>
           </ul>
