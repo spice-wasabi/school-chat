@@ -2,12 +2,12 @@ body{
   font-family: 'Kosugi Maru', sans-serif;
 }
 
-.head_bar {
+.wrapper {
+  display: flex;
+}
+.head-bar {
   background-color: #ffd725;
   position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
   padding: 10px;
   height: 130px;
   width: 100vw;
@@ -15,8 +15,10 @@ body{
   justify-content: center;
   align-items: center;
 }
-.main_chat {
+.top-main {
+  width: 100vw;
   height: 1200px;
+  overflow: scroll;
 }
 .icon {
   display: flex;

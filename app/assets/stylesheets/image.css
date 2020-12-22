@@ -2,6 +2,10 @@
   width: auto;
   height: 90px
 }
+.image-side-bar-logo {
+  width: 300px;
+  height: auto;
+}
 .image-size200 {
   width: 200px;
   height: auto;
