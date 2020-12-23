@@ -4,5 +4,14 @@ class UsersController < ApplicationController
   end
   def create
     @user = User.new
+    if @user.save
+      
+    else
+      render :new
+    end
   end
+
+
+  private
+
 end

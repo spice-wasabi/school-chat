@@ -180,8 +180,8 @@ h2 {
   color: white;
   font-size: 1rem;
   font-weight: bold;
+  justify-content: center;
   text-align: center;
-  padding: 10px 20px;
   margin: 70px 5px 0px 0px;
   border-radius: 30px;
 }
@@ -223,6 +223,12 @@ h2 {
   line-height: 2rem;
   text-decoration: none;
   }
+.text a {
+  font-size: 1.1rem;
+  color: #00005F;
+  line-height: 2rem;
+  text-decoration: none;
+}  
 .text-center {
   font-size: 1.2rem;
   color: #00005F;
