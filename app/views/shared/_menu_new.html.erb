@@ -1,12 +1,16 @@
-<div class="side-bar-header">
-  <%= image_tag "logo-items/ShoolChat-logo.png" , class: "image-side-bar-logo" %>
+<div class="side-header">
+  <%= link_to root_path do %>
+    <%= image_tag "logo-items/ShoolChat-logo.png" , class: "image-side-bar-logo" %>
+  <% end %>
 </div>
-<div class="side-bar-main">
-  <h1>新規登録</h1>
-  <div>
-  <%= link_to "■学校新規登録", new_school_path, class: "text" %>
-  </div>
-  <div>
-  <%= link_to "■先生新規登録", new_user_registration_path, class: "text" %>
-  </div>
+<div class="side-groups">
+  <h1>新規メニュー</h1>
+  <ul class="list-vertical">
+    <ls>
+      <%= link_to "■学校新規登録", new_school_path, class: "text" %>
+    </ls>
+    <ls>
+      <%= link_to "■先生新規登録", new_user_registration_path, class: "text" %>
+    </ls>
+  </ul>
 </div>

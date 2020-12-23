@@ -1,12 +1,7 @@
-<div class="room-main-header">
-</div>
-<div class="room-main-margin">
-</div>
-
 <div class="room-main-chat">
   <p class="form-title">先生新規登録</p>
   <div class="text-center">
-    先生を新規登録する場合、学校IDが必須となります。
+    先生を新規登録する場合、登録済みの学校IDが必須となります。
   </div>
 
   <%= form_with model: @user, url: user_registration_path, id: "new_user", local: true do |f| %>
@@ -15,17 +10,22 @@
         <%= render "shared/error_messages",  model: f.object %>
 
           <div class="form-line">
+            <label class="label">学校ID</label>
+            <%= f.text_field :school_name, class:"inputs", id:"school_id", placeholder:"10文字まで" %>
+          </div>
+
+          <div class="form-line">
             <label class="label">ユーザーID</label>
-            <%= f.email_field :name, class:"inputs", id:"name", placeholder:"10文字まで" %>
+            <%= f.text_field :name, class:"inputs", id:"name", placeholder:"10文字まで" %>
           </div>
 
           <div class="form-line">
             <label class="label">表示名</label>
-            <%= f.email_field :nickname, class:"inputs", id:"nickname", placeholder:"10文字まで" %>
+            <%= f.text_field :nickname, class:"inputs", id:"nickname", placeholder:"10文字まで" %>
           </div>
 
           <div class="form-line">
-            <label class="label">Email</label>
+            <label class="label">Eメール</label>
             <%= f.email_field :email, class:"inputs", id:"email", placeholder:"Email" %>
           </div>
 
@@ -35,7 +35,7 @@
           </div>
 
           <div class="form-line">
-            <label class="label">パスワード<br>確認</label>
+            <label class="label">パスワード確認</label>
             <%= f.password_field :password_confirmation, autocomplete: "off", class:"inputs", id:"password_confirmation", placeholder:"英数10文字まで" %>
           </div>
 

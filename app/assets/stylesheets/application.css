@@ -10,15 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_self
- *= reset.css
- *= top.css
- *= room.css
- *= text.css
- *= image.css
- *= menu.css
- *= form.css
  *= require_tree .
+ *= require_self
  */
 
  * {
