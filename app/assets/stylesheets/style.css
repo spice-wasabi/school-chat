@@ -20,6 +20,16 @@ h2 {
   font-size: 1.5rem;
   text-decoration: none;
 }
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 汎用*/
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ TOP画面*/
 .wrapper{
   height: 100vh;
@@ -83,6 +93,16 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+.side-header-name {
+  height: 6rem;
+  width: 18rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #ffd725;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
 .side-groups {
   height: calc(100vh - 6rem);
   width: 18rem;
@@ -91,12 +111,22 @@ h2 {
   overflow: scroll;
 }
 .main-header {
+  position: fixed;
+  z-index: 500;
   height: 6rem;
   width: calc(100vw - 18rem);
   background-color: #b0d725;
+  padding-left: 3rem;
+  padding-right: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.main-header-name {
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 .messages {
   height: calc(100vh - 14rem);
@@ -208,12 +238,22 @@ h2 {
   width: 15rem;
   height: auto;
 }
+.image-side-menu-logo {
+  width: 12rem;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
 .image-size200 {
   width: 12.5rem;
   height: auto;
 }
 .image-size300 {
   width: 18rem;
+  height: auto;
+}
+.image-buttan {
+  width: 3rem;
   height: auto;
 }
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ text*/

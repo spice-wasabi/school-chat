@@ -1,23 +1,18 @@
 <div class="room-main-chat">
-  <p class="form-title">先生ログイン</p>
+  <p class="form-title">生徒ログイン</p>
   <div class="text-center">
-    先生専用のログインページです。<br>生徒のみなさんは
-    <%= link_to "こちら", "#", class:"text" %>
+    せいと専用のログインページです。<br>先生方は
+    <%= link_to "こちら", new_user_session_path, class:"text" %>
     からログインしてください。
   </div>
-  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+  <%= form_with model: @student, url: "#", local: true do |f| %>
   <div class="form-item">
     <div class="form-box">
-      <%= render "shared/error_messages",  model: f.object %>
+      <%# <%= render "shared/error_messages",  model: f.object %>
 
       <div class="form-line">
-        <label class="label">ユーザーID</label>
+        <label class="label">せいとID</label>
         <%= f.text_field :user_name, class:"inputs", id:"user_name", placeholder:"ユーザーID" %>
-      </div>
-
-      <div class="form-line">
-        <label class="label">メールアドレス</label>
-        <%= f.email_field :email, class:"inputs", autofocus: true, placeholder:"Email" %>
       </div>
 
       <div class="form-line">
