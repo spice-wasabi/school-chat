@@ -1,21 +1,21 @@
 .gnav {
   display: flex;
-  margin: 0 50px;
-  width: 200px;
+  margin: 0 3rem;
+  width: 12.5rem;
 }
 .gnav li {
   list-style: none;
 }
 .gnav li a {
   background: #ffa425;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #fff;
   display: block;
-  height: 50px;
+  height: 3rem;
   text-align: center;
-  line-height: 50px;
+  line-height: 3rem;
   text-decoration: none;
-  width: 200px;
+  width: 12.5rem;
 }
 .gnav li li {
   height: 0;
@@ -23,6 +23,6 @@
   transition: .5s;
 }
 .gnav li:hover > ul > li {
-  height: 60px;
+  height: 3.75rem;
   overflow: visible;
 }

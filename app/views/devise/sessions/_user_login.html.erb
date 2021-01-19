@@ -1,0 +1,36 @@
+<div class="room-main-chat">
+  <p class="form-title">先生ログイン</p>
+  <div class="text-center">
+    先生専用のログインページです。<br>生徒のみなさんは
+    <%= link_to "こちら", "#", class:"text" %>
+    からログインしてください。
+  </div>
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+  <div class="form-item">
+    <div class="form-box">
+      <%= render "shared/error_messages",  model: f.object %>
+
+      <div class="form-line">
+        <label class="label">ユーザーID</label>
+        <%= f.text_field :user_name, class:"inputs", id:"user_name", placeholder:"ユーザーID" %>
+      </div>
+
+      <div class="form-line">
+        <label class="label">メールアドレス</label>
+        <%= f.email_field :email, class:"inputs", autofocus: true, placeholder:"Email" %>
+      </div>
+
+      <div class="form-line">
+        <label class="label">パスワード</label>
+        <%= f.password_field :password, class:"inputs", autocomplete: "off", placeholder:"パスワード" %>
+      </div>
+
+      <div class="form-line"> 
+        <%= f.submit "ログイン", class:"create-box" %>
+        <%= link_to "戻る", root_path, class:"back-box" %>
+      </div>
+      
+    </div>
+  </div>
+  <% end %>
+</div>

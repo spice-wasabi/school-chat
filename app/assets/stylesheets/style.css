@@ -1,104 +1,289 @@
-/* リセットCSS */
-
-/* 
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
+html {
+  width: 100vw;
+  height: 100vh;
 }
-
 body {
-  line-height:1;
+  font-family: 'Kosugi Maru', sans-serif;
 }
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-  display:block;
+h1 {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 2rem;
+  text-decoration: none;
 }
-
-nav ul {
-  list-style:none;
+h2 {
+  margin-bottom: 1.5rem;
+  color:#00005F;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
-
-blockquote, q {
-  quotes:none;
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 汎用*/
+.flex-box {
+  display: flex;
+  justify-content: space-between;
 }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content:'';
-  content:none;
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-a {
-  margin:0;
-  padding:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ TOP画面*/
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
 }
-
-/* change colours to suit your needs */
-ins {
-  background-color:#ff9;
-  color:#000;
-  text-decoration:none;
+.head-bar {
+  background-color: #ffd725;
+  position: fixed;
+  padding: auto;
+  height: 7rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
-
-/* change colours to suit your needs */
-mark {
-  background-color:#ff9;
-  color:#000; 
-  font-style:italic;
-  font-weight:bold;
+.top-main {
+  position: absolute;
+  top: 7rem;
+  width: 100vw;
+  height: 57rem;
+  overflow: scroll;
+  z-index: 0;
 }
-
-del {
-  text-decoration: line-through;
+.icon {
+  display: flex;
+  margin: 3rem 0;
+  justify-content: center;
 }
-
-abbr[title], dfn[title] {
-  border-bottom:1px dotted;
-  cursor:help;
+.text-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
-
-table {
-  border-collapse:collapse;
-  border-spacing:0;
+.text-box{
+  width: 30rem;
+  border-radius: 0.6rem;
+  background-color: #ebebeb;
+  padding: 1.25rem;
 }
-
-/* change border colour to suit your needs */
-hr {
-  display:block;
-  height:1px;
-  border:0;   
-  border-top:1px solid #cccccc;
-  margin:1em 0;
-  padding:0;
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ room画面*/
+.side-bar {
+  position: fixed;
+  height: 100vh;
+  width: 18rem;
 }
-
-input, select {
-  vertical-align:middle;
+.main {
+  height: 100vh;
+  width: calc(100vw - 18rem);
+  position: absolute;
+  left: 18rem;
+}
+.side-header {
+  height: 6rem;
+  width: 18rem;
+  background-color: #ffd725;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-header-name {
+  height: 6rem;
+  width: 18rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #ffd725;
+  display: flex;
+  align-items: center;
+  padding-left: 3rem;
+}
+.side-groups {
+  height: calc(100vh - 6rem);
+  width: 18rem;
+  background-color: #ffa425;
+  padding: 3rem;
+  overflow: scroll;
+}
+.main-header {
+  position: fixed;
+  z-index: 500;
+  height: 6rem;
+  width: calc(100vw - 18rem);
+  background-color: #b0d725;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header-name {
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.messages {
+  height: calc(100vh - 14rem);
+  width: calc(100vw - 18rem);
+  justify-content: center;
+  overflow: scroll;
+  z-index:0;
+}
+.message-bar {
+  position: fixed;
+  height: 8rem;
+  width: calc(100vw - 18rem);
+  background-color: #ebebeb;
+  display: flex;
+  align-items: center;
+}
+.message-box {
+  height: 5rem;
+  width: calc(100vw - 30rem);
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+  margin-left: 1.5rem;
+}
+.messages-nonebox {
+  height: calc(100vh - 6rem);
+  width: calc(100vw - 18rem);
+  justify-content: center;
+  overflow: scroll;
+  z-index:0;
+}
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ form*/
+.form-title {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00005F;
+  padding: 1.5rem 0;
+  text-decoration: none;
+}
+.form-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-box {
+  width: 37rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #ebebeb;
+}
+.form-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.label{
+  color: #00005F;
+  float: left;
+  margin-right: 1rem;
+  width: 8.5rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+.inputs {
+  float: left;
+  width: 20rem;
+  height: 3rem;
+  border: solid 1px #aaa;
+  border-radius: 10px;
+  padding: 10px;
+}
+.create-box {
+  width: 6rem;
+  height: 50px;
+  background: #e0505c;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  margin: 70px 5px 0px 0px;
+  border-radius: 30px;
+}
+.back-box {
+  width: 6rem;
+  height: 50px;
+  background: #aaa;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 16.5px 20px;
+  margin: 70px 0px 0px 5px;
+  text-decoration: none;
+  border-radius: 30px;
+}
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ image*/
+.image-size-logo {
+  width: auto;
+  height: 4.5rem
+}
+.image-side-bar-logo {
+  width: 15rem;
+  height: auto;
+}
+.image-side-menu-logo {
+  width: 12rem;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.image-size200 {
+  width: 12.5rem;
+  height: auto;
+}
+.image-size300 {
+  width: 18rem;
+  height: auto;
+}
+.image-buttan {
+  width: 3rem;
+  height: auto;
+}
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ text*/
+.text {
+  font-size: 1.1rem;
+  color: #00005F;
+  line-height: 2rem;
+  text-decoration: none;
+  }
+.text a {
+  font-size: 1.1rem;
+  color: #00005F;
+  line-height: 2rem;
+  text-decoration: none;
+}  
+.text-center {
+  font-size: 1.2rem;
+  color: #00005F;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  }
+.error-alert {
+  font-size: 15px;
+  color: #aaaaaa;
+  line-height: 30px;
+  text-decoration: none;
+}
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ list*/
+.list-vertical {
+  display: flex;
+  flex-direction: column;
 }

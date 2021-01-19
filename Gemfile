@@ -61,3 +61,5 @@ gem 'image_processing', '~> 1.2'
 gem 'mini_magick'
 # 追加  日本語化
 gem 'rails-i18n'
+# 追加  ログイン機能
+gem 'devise'
